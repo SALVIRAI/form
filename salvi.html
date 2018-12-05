@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Interview Process</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="salvi.css">
+<script type="text/javascript" src="salvi.js" ></script>
+</head>
+<body>
+
+<form id="interviewform" method="POST">
+  <div class="container">
+    <h1 style="text-align: center"><b> REGISTRATION FORM </b></h1>
+     <p style="text-align: center">Please fill in the form </p>
+    <hr>
+
+    <label for="uid"><b>Unique Id</b></label>
+    <button onclick="serialCreate()">Generate Id</button>
+    <input type="text" placeholder="Unique interview ID" name="phoneno" id="uid" required>
+
+    <label for="interviewp"><b>Interview purpose</b></label>
+    <select id="dropdownlist1">
+        <option>Select...</option>
+        <option value="Visa">Visa</option>
+        <option value="Permanent residence">Permanent residence</option>
+    </select>
+
+    <label for="city"><b>Interview city</b></label>
+    <select id="dropdownlist2" onChange="check(this);">
+        <option>Select...</option>
+        <option value="London">London</option>
+        <option value="Brighton">Brighton</option>
+        <option value="Belfast">Belfast</option>
+        <option value="Cardiff">Cardiff</option>
+        <option value="Newcastle">Newcastle</option>
+        <option value="Elsewhere">Elsewhere</option>
+    </select>
+    
+    <input id="other-input" style="display:none; width: 100%; padding: 15px; margin: 5px 0 22px 0; border: none; background: #f1f1f1;" placeholder="Enter your city" ></input>
+      
+    <label for="Address"><b>Address</b></label>
+    <input type="text" placeholder="the address of the place where the interview is held" name="address" id="address" required>
+
+    <label for="Interviewer"><b>Interviewer</b></label>
+    <input type="text" placeholder="full name of the person that performs the interview" name="Interviewer" id="interviewer" required> 
+        
+    <label for="Interviewee"><b>Interviewee</b></label>
+    <input type="text" placeholder="full name of the person to be interviewed" name="Interviewee" id="interviewee" required>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" id="email" pattern="[a-zA-Z]{3,}@[a-zA-Z]{3,}[.]{1}[a-zA-Z]{3,}" required>
+
+    <label for="phoneno"><b>Phone Number</b></label>
+    <input type="text" placeholder="Enter Phone Number" name="phoneno" id="phoneno" pattern="[789][0-9]{9}" required>
+
+    <label for="date"><b>Date</b></label>
+    <input type="date" placeholder="dd-mm-yyyy" name="phoneno" id="date" required>
+    
+    <button type="submit" class="registerbtn">Submit</button>
+    <button class="registerbtn" onClick="details()">Details</button>
+  </div>
+
+</form>
+
+</body>
+</html>
